@@ -24,9 +24,25 @@ box-sizing:         border-box;
   @include box_sizing;
 }
 
+.navbar{
+  background-color: #002533;
+  color: white;
+}
+
+.navbar-inverse{
+  border-color: #347B98;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+  color: #EAF6FB;
+  &:hover{
+    color: #fff;
+  }
+}
 
 body {
   padding-top: 60px;
+  
 }
 section {
   overflow: auto;
@@ -34,6 +50,10 @@ section {
 textarea {
   resize: vertical;
   
+}
+
+.jumbotron{
+ background-color: #F0FEF4;
 }
 
 .center{
@@ -66,10 +86,12 @@ p {
   line-height: 1.7em;
 }
 #logo {
+  font-family: Jazz LET, fantasy;
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: $white;
+
+  color: #FDE9CD;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -95,23 +117,23 @@ footer {
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
 
-	a {
-  		color: $gray;
-   		&:hover {
-		     color: $gray-darker;
-		     }
+  a {
+      color: $gray;
+      &:hover {
+         color: $gray-darker;
+         }
    }
 
    small {
-		float: left;
+    float: left;
    }
 
    ul {
-		float: right;
-		list-style: none;
-  		li {
-		  float: left;
-		  margin-left: 15px;
+    float: right;
+    list-style: none;
+      li {
+      float: left;
+      margin-left: 15px;
 }
 }
 }
@@ -157,10 +179,17 @@ aside {
 .signup_form, .login_form{
   width: 40%;
   margin: 0 auto;
-  border: solid #242424;
-  box-shadow: 0px 0px 25px black;
+  border: solid #D2EAF3;
+  border-color: #D2EAF3;
+  box-shadow: 0px 0px 25px #D0EBF6;
   padding: 5% 45px 0;
   margin-top: 7%;
+  h1{
+    font-family: RW Chancery L, cursive;
+    color: #1B0E14;
+    font-size: 2.9rem;
+    font-weight: bold;
+  }
 }
 .singup_button, .login_button{
   padding: 6% 0;

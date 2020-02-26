@@ -264,7 +264,7 @@ DEPENDENCIES
   optimist (~> 3.0)
   pg (~> 0.18.4)
   puma (~> 4.1)
-  rails (~> 6.0.1)
+  rails (~> 6.0.2.1)
   rails-controller-testing
   sass-rails (>= 6)
   selenium-webdriver
