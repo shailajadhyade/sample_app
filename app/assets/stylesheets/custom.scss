@@ -6,6 +6,7 @@ $gray-light: #777;
 $gray-medium-light: #eaeaea;
 $white: #fff;
 $gray: #555;
+$black: #000;
 $gray-darker: #222;
 
 @mixin box_sizing {
@@ -20,17 +21,25 @@ box-sizing:         border-box;
   clear: both;
   float: left;
   width: 100%;
-  margin-top: 45px;
+  margin-top: 10%;
   @include box_sizing;
+  bottom: 0;
+  visibility: hidden;
+  position: relative;
+  /*width: 100%;*/
+  /*background-color: #f5f5f585;*/
+  /*height: 12rem;*/
 }
 
 .navbar{
-  background-color: #002533;
-  color: white;
+  background-color: $black;
+  color: #efdad5;
+  position: relative;
+  margin-bottom: 0; 
 }
 
 .navbar-inverse{
-  border-color: #347B98;
+  border-color: #37291F;
 }
 
 .navbar-inverse .navbar-nav > li > a{
@@ -40,10 +49,24 @@ box-sizing:         border-box;
   }
 }
 
-body {
-  padding-top: 60px;
-  
+body{
+  margin: auto;
 }
+.wrapper {
+  display: block;
+  background-image: image-url("one.jpeg");
+  background-size: cover; 
+  /*opacity: 0.5;*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;  
+}
+
+.bg-container{
+  position: relative;
+  min-height: 100vh;
+}
+
 section {
   overflow: auto;
 }
@@ -53,8 +76,15 @@ textarea {
 }
 
 .jumbotron{
- background-color: #F0FEF4;
+ background-color: #524a4a4a;
+ margin-top: 5%;
+ h1{
+  color: #1b1212ba;
+ }
 }
+.jumbotron h2 a{
+  color: #3a4d5d;
+} 
 
 .center{
   text-align: center;
@@ -79,7 +109,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $gray-light;
+  color: #fbf6f6d1;
 }
 p {
   font-size: 1.1em;
@@ -90,8 +120,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-
-  color: #FDE9CD;
+  color: #f7edec;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -103,22 +132,21 @@ p {
   }
 }
 
-/*
-img {
-  display: none;
-}
-*/
+
 
 /* footer */
 
 footer {
-  margin-top: 45px;
+  margin-top: 10%;
   padding-top: 5px;
+  font-size:16px;
   border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
-
+  color: $black;
+  bottom: 10%;
+  position: absolute;
+  width: 100%;
   a {
-      color: $gray;
+      color: $black;
       &:hover {
          color: $gray-darker;
          }
@@ -126,14 +154,17 @@ footer {
 
    small {
     float: left;
+    width: 50%;
+    padding-left: 20px;
    }
 
    ul {
     float: right;
+    width: 50%;
     list-style: none;
       li {
       float: left;
-      margin-left: 15px;
+      margin-left: 15%;
 }
 }
 }
@@ -168,7 +199,7 @@ aside {
 
 .gravatar {
   float: left;
-  margin-right:10px;
+  margin: 0 15px;
   border: double #A0A0A0;
 }
 .gravatar_edit {
@@ -176,19 +207,43 @@ aside {
 }
 
 /* forms */
+.form-control{
+  color: #337A90;
+  opacity:1;
+  border: 1px solid #89cff0;
+  /*outline: none;*/
+  /*border: none;*/
+  /*border-bottom: 2px dotted #337A90;*/
+  /*box-shadow: none;*/
+  /*border-style: collapse;*/
+  /*border-radius: 3px;*/
+  &:focus {
+    /*border-bottom: 2px solid #2e6da4;*/
+   /*-webkit-box-shadow: none;*/
+   /*box-shadow: none;*/
+}
+  &::placeholder {
+  color: #a8a8a8;
+  }
+}
+
+
 .signup_form, .login_form{
+  /*opacity:1;*/
   width: 40%;
   margin: 0 auto;
-  border: solid #D2EAF3;
-  border-color: #D2EAF3;
-  box-shadow: 0px 0px 25px #D0EBF6;
-  padding: 5% 45px 0;
-  margin-top: 7%;
+  padding: 5% 45px 2px;
+  margin-top: 10%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
   h1{
     font-family: RW Chancery L, cursive;
-    color: #1B0E14;
+    color: #f7edee;
     font-size: 2.9rem;
     font-weight: bold;
+  }
+  a{
+    color: #3aa4ff;
   }
 }
 .singup_button, .login_button{
@@ -196,7 +251,7 @@ aside {
 }
 
 .account{
-  margin-bottom: 25%  
+  margin-bottom: 20%;
 }
 
 input, textarea, select, .uneditable-input {
@@ -212,10 +267,11 @@ input {
 /* errors explanation for signup form */
 
 #error_explanation {
+  margin-top: 10px;
   color: red;
   ul {
     color: red;
-    margin: 0 0 30px 0;
+    margin: 60px 0 10px 0;
   }
 }
 .field_with_errors {
@@ -224,3 +280,12 @@ input {
      color: $state-danger-text;
     }
 } 
+
+.alert{
+  margin-top: 10px;
+}
+
+.profile{
+  background-color: #fdf9f9d1 !important;
+  padding: 5px 15px;
+}
